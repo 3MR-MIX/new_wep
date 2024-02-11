@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+</head>
+<body>
+    <table class="table">
+        <div >
+            <h1>Do You Happy with our website?</h1>
+            <input id="y1" type="radio" value="Yes" >1
+            <input id="y1" type="radio" value="No" >2
+            <input id="y1" type="radio" value="Yes" >3
+            <input id="y1" type="radio" value="No" >4
+
+        </div>
+        <div >
+             <h1>Do You Find it useful?</h1>
+            <input id="y2" type="radio" value="Yes" >1
+            <input id="y2" type="radio" value="No" >2
+            <input id="y1" type="radio" value="Yes" >3
+            <input id="y1" type="radio" value="No" >4
+
+        </div>
+        <div >
+            <h1>Will you use our website agian...?</h1>
+            <input id="y3" type="radio" value="Yes" >1
+            <input id="y3" type="radio" value="No" >2
+            <input id="y1" type="radio" value="Yes" >3
+            <input id="y1" type="radio" value="No" >4
+        </div>
+            <button type="button" onclick="quiz()">Submit</button>
+
+    </table>
+    <script>
+        let y1 = document.getElementById("y1")
+        let y2 = document.getElementById("y2")
+        let y3 = document.getElementById("y3")
+        let count=0;
+        let countt=0
+        function quiz(){
+            if(y1.checked==true){
+                count++;
+            }
+            if(y2.checked==true){
+                countt++;
+            }
+            if(y3.checked==true){
+                count++;
+            }
+            alert("Thank you for the feedback total 1 point" +count);
+            alert("Thank you for the feedback total 4 point 3" );
+            window.location.href="homepage.html"
+        }
+    </script>
+</body>
+</html>

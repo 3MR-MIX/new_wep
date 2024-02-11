@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart-Amazon</title>
+</head>
+<style>
+</style>
+<link rel="stylesheet" href="homepage.css">
+<body>
+    <div class="nav">
+        <ul>
+            <a href="homepage.html">Home_Page</a>
+        </ul>
+    </div>
+    <h1>Cart</h1>
+    <div class="container">
+        <div class="slider" id="slider">
+            <table style="background-color: rgb(81, 121, 151);">
+                <tr id="tr1">
+                    <td>
+                        <img src="shirt1.jpg">
+                    </td>
+                    <td>
+                        
+                            <p style="font-size: large;">T-Shirt black bode made in south UK </p>
+                       
+                    </td>
+                    <td>
+                        $400 USD
+                    </td>
+                    <td>
+                        <button onclick="cou()">-</button>
+                        <button onclick="buynow()">+</button>
+                        <p id="text"></p>
+                    </td>
+                    <td>
+                        <p id="aa"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+  
+        <div id="butt">
+            <button id="buy" onclick="total()">Buy</button>
+            <button id="can" onclick="bb()" >Cancel Order</button>
+            <button id="total">Total Price = $<span id="totalAmount">0</span> USD</button>
+        </div>
+        <script>
+            let counter = 0;
+            let pricePerUnit = 400;
+            let totalPrice = 0;
+
+        function buynow() {
+            ++counter;
+            document.getElementById("text").textContent = counter;
+            updateTotal();
+        }
+
+        function cou() {
+            if (counter > 0) {
+                --counter;
+                document.getElementById("text").textContent = counter;
+                updateTotal();
+            }
+        }
+
+        function updateTotal() {
+            totalPrice = counter * pricePerUnit;
+            document.getElementById("aa").textContent = "$" + totalPrice ;
+            document.getElementById("totalAmount").textContent = totalPrice;
+        }
+
+        function total() {
+            alert("Total Price:" + totalPrice);
+        }
+        function bb(){
+            window.location.href = 'homepage.html'
+        }
+        </script>
+</body>
+</html>

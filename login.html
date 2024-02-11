@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="login.css">
+<body>
+    <div class="form">
+        <form action="">
+            <h2>Login!</h2>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="user1" placeholder="username..">
+            <label for="password">Password:</label>
+            <input type="password" name="PassWord" id="pass1" placeholder="password..">
+            <button onclick="login()">Login</button>
+            <h4>Idont have an account....</h4>
+            <button>Sign up!</button>
+            <button>Forget pass!</button>
+        </form>
+    </div>
+
+    <div class="form">
+        <form action="">
+            <h2>Sign Up!</h2>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="user2" placeholder="username..">
+            <label for="PassWord">Password:</label>
+            <input type="password" name="password" id="pass2" placeholder="password..">
+            <label for="Age">Age:</label>
+            <input type="text" name="age" id="age2" placeholder="age..">
+            <label for="Number">Number:</label>
+            <input type="text" name="number" id="num2" placeholder="number..">
+            <div class="gender-container">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="Gender" value="male" >
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="Gender" value="female" >
+            <label for="female">Female</label>
+            </div>
+            <button type="button" onclick="signup()">Sign UP!</button>
+        </form>
+    </div>
+<a href=""></a>
+    <div class="form">
+        <form action="">
+            <h2>Forget Pass!</h2>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="user3" placeholder="username..">
+            <label for="PassWord">Password:</label>
+            <input type="password" name="password" id="pass3" placeholder="password..">
+            <button type="button" onclick="forget()">Update!</button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
